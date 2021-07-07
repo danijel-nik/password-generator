@@ -1,8 +1,40 @@
-# password-generator
-NodeJS command line app
+# Command Line Password Generator
 
-## List of commands you should use:
-- ```npm install```
-- ```npm link``` - after that you will be able to use `passgen` globaly (check your sudo premissions, might be required)
-- ```passgen --length 20 --save``` - creates password with 20 characters and saves to file
-- ```passgen -nn -ns``` - creates password string with no numbers and no symbols
+Node.js command line app to generate random passwords
+
+## Usage
+
+Install dependencies
+
+```
+npm install
+```
+
+Run file
+
+```
+node index (options)
+```
+
+To create a symlink to run "passgen" from anywhere (for linux users: check your sudo premissions, might be required)
+
+```
+npm link
+
+# Now you can run
+passgen (options)
+
+# To remove symlink
+npm unlink
+```
+
+## Options
+
+| Short | Long              | Description                     |
+| ----- | ----------------- | ------------------------------- |
+| -l    | --length <number> | length of password (default: 8) |
+| -s    | --save            | save password to passwords.txt  |
+| -nn   | --no-numbers      | remove numbers                  |
+| -ns   | --no-symbols      | remove symbols                  |
+| -h    | --help            | display help for command        |
+| -V    | --version         | Show the version                |
